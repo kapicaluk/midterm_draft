@@ -1,0 +1,10 @@
+<section class="trailinfo">
+  <div class="trail cf" ng-model="trails">
+    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+      <img ng-src="images/{{trails[whichItem].shortname}}_tn.jpg" alt="Photo of {{trails[whichItem].name}}">
+      <div class="about">{{trails[whichItem].about}}</div>
+    </div>
+  </div>
+  <a href="index.html">&laquo; Back to search</a>
+</section>

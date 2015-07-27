@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Gertrude's Nose trail in Minnewaska State Park ",
+    "shortname":"Gertrude_Nose",
+    "lenght":"8 hours",
+    "about":"This is an awesome day hike"
+  },
+  {
+    "name":"Delaware Water Gap",
+    "shortname":"Delaware_Gap",
+    "lenght":" 4 hours",
+    "about":"A short hike with a bottle of wine"
+  },
+  {
+    "name":"Hudson Highlands Gateway Park",
+    "shortname":"Hudson_Highlands",
+    "lenght":"7 hours",
+    "about":"A no-need a car hike"
+  },
+  {
+    "name":"Bear Mountain State Park",
+    "shortname":"Bear_Mt",
+    "lenght":"5 hours",
+    "about":"Hiking with bears"
+  }
+]

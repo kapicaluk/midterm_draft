@@ -1,0 +1,46 @@
+<section class="artistpage">
+  <div class="search">
+    <h1>Trail Finder</h1>
+    <label>search: </label>
+    <input ng-model="query" placeholder="Look for a trail" autofocus>
+
+  </div>
+  <ul class="traillist" ng-show="query">
+    <li ng-animate="'animate'" class="trail cf" ng-repeat="item in trails | filter: query | orderBy: trailOrder:direction">
+      <a href="#/details/{{trails.indexOf(item)}}">
+        <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Trail map of {{item.name}}">
+    
+        </div>
+      </a>
+    </li>
+  </ul>  
+  <div class="cl">
+    <h3>Add your hike **</h3>
+    <div class="panel panel-default">
+      <div class="alert alert-danger" ng-show="add_trail_error">
+        {{add_trail_error}}
+      </div>
+      <form name="add_trail_form" novalidate>
+        <div class="panel-heading">
+          <input type="text" placeholder="title" size="20" ng-model="adding_trail.title" ng-required="true"  />
+          <div style="float:left">
+            <input 
+            type="text" 
+            placeholder="yyyy/mm/dd" 
+            size="10" 
+            ng-model="adding_trail.date" 
+            ng-required="true" />
+          </div>
+        </div>
+        <div class="panel-body">
+          <textarea placeholder="description" rows="4" ng-model="adding_trail.description" ng-required="true"  ></textarea>
+          <input name="name" type="text" placeholder="short name" size="16" ng-model="adding_trail.name" ng-required="true"  />
+          
+
+          <input type="text" placeholder="image url" size="28" ng-model="adding_trail.imageurl" ng-required="true"  />
+        </div>
+        <button ng-click="addTrail(adding_trail)" class="btn btn-success">Add your hike</button>
+      </form>
+    </div>
+  </div>
+</section>
