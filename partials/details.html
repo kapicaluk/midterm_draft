@@ -1,10 +1,16 @@
+<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
 <section class="trailinfo">
-  <div class="trail cf" ng-model="trails">
-    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
-    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+  <div class="container" ng-model="trails">
+  	<div class="row">
+
+    <a href="#/details/{{prevItem}}" class="button">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="button">&gt;</a>
       <img ng-src="images/{{trails[whichItem].shortname}}_tn.jpg" alt="Photo of {{trails[whichItem].name}}">
-      <div class="about">{{trails[whichItem].about}}</div>
+      <div class="row"><h6>{{trails[whichItem].about}}</h6></div>
     </div>
   </div>
-  <a href="index.html">&laquo; Back to search</a>
+  <div class="eleven columns">
+  <a class="button" href="index.html">&laquo; Back to search</a></div></div>
 </section>

@@ -1,13 +1,17 @@
-<div class="cl">
-		<h3>Add your hike **</h3>
+<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<div class="row">
+	<div class="six columns">
+		<h3>Add your hike </h3>
 		<div class="panel panel-default">
 			<div class="alert alert-danger" ng-show="add_trail_error">
 				{{add_portfolio_error}}
 			</div>
 			<form name="add_trail_form" novalidate>
-				<div class="panel-heading">
-					<input type="text" placeholder="title" size="20" ng-model="adding_trail.title" ng-required="true"  />
-					<div style="float:right">
+				<div class="six columns">
+					<input class="u-full-width" type="text" placeholder="title" size="20" ng-model="adding_trail.title" ng-required="true"  />
+					<div style="six columns">
 						<input 
 						type="text" 
 						placeholder="yyyy/mm/dd" 
@@ -16,7 +20,7 @@
 						ng-required="true" />
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="six columns">
 					<textarea placeholder="description" rows="4" ng-model="adding_trail.description" ng-required="true"  ></textarea>
 					<input name="name" type="text" placeholder="short name" size="16" ng-model="adding_trail.name" ng-required="true"  />
 					

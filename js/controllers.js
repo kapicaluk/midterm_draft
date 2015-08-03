@@ -54,7 +54,7 @@ trailControllers.controller('DetailsController', ['$scope', '$http','$routeParam
     $scope.trails = data;
     $scope.whichItem = $routeParams.itemId;
 
-    if ($routeParams.itemId > 0) {
+    if ($routeParams.itemId > 1) {
       $scope.prevItem = Number($routeParams.itemId)-1;
     } else {
       $scope.prevItem = $scope.trails.length-1;

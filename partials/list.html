@@ -1,21 +1,26 @@
-<section class="artistpage">
-  <div class="search">
+<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<section class="trailpage">
+  <div class="container">
     <h1>Trail Finder</h1>
     <label>search: </label>
-    <input ng-model="query" placeholder="Look for a trail" autofocus>
+    <input type="search" ng-model="query" placeholder="Look for a trail" autofocus>
 
   </div>
-  <ul class="traillist" ng-show="query">
-    <li ng-animate="'animate'" class="trail cf" ng-repeat="item in trails | filter: query | orderBy: trailOrder:direction">
+  <ul class="container" ng-show="query">
+    <li class="columns" ng-repeat="item in trails | filter: query | orderBy: trailOrder:direction">
       <a href="#/details/{{trails.indexOf(item)}}">
+        <div class "img">
         <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Trail map of {{item.name}}">
+      </div>
     
         </div>
       </a>
     </li>
   </ul>  
-  <div class="cl">
-    <h3>Add your hike **</h3>
+  <div class="container">
+    <h3>Add your hike </h3>
     <div class="panel panel-default">
       <div class="alert alert-danger" ng-show="add_trail_error">
         {{add_trail_error}}
