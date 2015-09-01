@@ -1,0 +1,6 @@
+<h2><a ng-href="#/">Trail Finder</a></h2>
+<a ng-show="firstname" class="icon-list comp" ng-href="#/newtrail">Add your hike</a>
+<a ng-show="firstname" class="icon-list comp" ng-href="#/list">Find a hike</a>
+<a ng-hide="firstname" class="icon-login comp" ng-href="#/login">login</a>
+<a ng-hide="firstname" class="icon-register comp" ng-href="#/register">register</a>
+<button ng-show="firstname" class="btn-logout" ng-click="logoff()">Logout</button>

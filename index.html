@@ -6,15 +6,25 @@
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/angular/angular-route.min.js"></script>
   <script src="lib/angular/angular-animate.min.js"></script>
-
+  <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/authentication.js"></script>
 	<!-- <link rel="stylesheet" type="text/css" href="css/_bootstrap.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+
 </head>
+
+
 <body>
-<div class="container" ng-view></div>
+<nav ng-controller="registration" class="nav" ng-include="'partials/navigation.html'"></nav>
+
+  <main class="wrap" ng-view></main>
+
 </body>
 </html>
